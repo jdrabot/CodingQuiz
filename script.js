@@ -1,6 +1,8 @@
 var countdownEl = document.getElementById("countdown-timer");
 var startButtonEl = document.getElementById("start");
 var titleEl = document.getElementById("coding-quiz-challenge");
+var questionOneEl = document.getElementById("question-one");
+
 
 function countdown() {
     var timeLeft = 60;
@@ -20,7 +22,8 @@ function countdown() {
     }, 1000);
 }
 
-startButtonEl.addEventListener("click", function(){
+startButtonEl.addEventListener("click", function () {
     countdown();
     titleEl.classList.add("hidden");
+    questionOneEl.classList.remove("hidden");
 })
